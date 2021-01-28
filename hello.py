@@ -29,6 +29,12 @@ count = 0
 for line in x :
        count += 1
 print(count)
+print("Confirming your file name and your ToDo list : ")
 
 #printing the file name
 print(fname)
+
+#Reading the file
+file = open(fname , "r")
+text = file.read()
+print(text)
