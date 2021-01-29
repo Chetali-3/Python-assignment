@@ -6,8 +6,8 @@ def print_name(name) :
 print_name(input("Please enter your name :" ))
 
 # Asking the operator
-print("What do you want to open , for new file type 'new.file'  or for existing file type 'ex.file' ")
-answer = input("Please enter your existing file name : ")
+print("Note :-  for new Todo  file type 'new.file'  or for existing Todo file type 'ex.file' ")
+answer = input("Please enter which file you want to open : ")
 if answer == "ex.file" :
    fname = input("Please enter your existing file name: ")
 # Opening the existing file and reading it
@@ -15,25 +15,30 @@ if answer == "ex.file" :
    text = file.read()
    print(text)
 # asking to operate
-   print("What do you want to do now,  if you want to add a ToDo type plus, for removing type cut and  for closing the file type close :")
+   print(" What do you want to do now, if you want to add a ToDo type plus, for removing type cut and  for closing the file type close :")
    reply = input ("Enter your reply :")
    if reply == "plus" :
         plus = input("Type the Todo , you want to add:")
         file = open (fname , "r+")
         text = file.read()
         file.write(plus)
-        file.close()
-   elif reply == " remove" :
-        remove = input("Type the ToDo you want to remove :")
-        file = open(fname , "r")
+        file.close()                        
+   elif reply == "cut" :
+        cut = input("Type the index of ToDo you want to remove (note- index starts from 0) :")
+        file = open(fname , "r+")
         text = file.read()
-        file_list = [fname]
-        file_list.remove[remove]
-        print(file_list)
+        lines = text.split("\n")
+        print(lines)
+        lines.pop(int(cut))
+        print(lines)
+        new_file = str(lines)
+        file = open(fname, "w")
+        file.write(new_file)
+        print(file)
         file.close()
    else :
         file.close()
-# Last time Reading the file
+# Last time Reading the last time
    print(" Your new todo list :")
    file = open(fname,"r")
    text = file.read()
