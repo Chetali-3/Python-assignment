@@ -65,7 +65,7 @@ else :
          print("Okay, next one:")
    file.close()
 #Counting lines
-   print(Your list index is:)
+   print(Total work you have to do is:)
    x = open(fname , "r")
    count = 0
    for line in x :
