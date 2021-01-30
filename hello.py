@@ -6,7 +6,7 @@ def print_name(name) :
 print_name(input("Please enter your name :" ))
 
 # Asking the operator
-print("Note :-  for new Todo  file type 'new.file'  or for existing Todo file type 'ex.file' ")
+print("Note :-  for new Todo file, type 'new.file'  or for existing Todo file ,type 'ex.file' ")
 answer = input("Please enter which file you want to open : ")
 if answer == "ex.file" :
    fname = input("Please enter your existing file name: ")
@@ -64,7 +64,8 @@ else :
     else :
          print("Okay, next one:")
    file.close()
-
+#Counting lines
+   print(Your list index is:)
    x = open(fname , "r")
    count = 0
    for line in x :
