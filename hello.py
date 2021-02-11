@@ -24,18 +24,18 @@ if answer == "ex.file" :
         file.write(plus)
         file.close()                        
    elif reply == "cut" :
-        cut = input("Type the index of ToDo you want to remove (note- index starts from 0) :")
-        file = open(fname , "r+")
-        text = file.read()
-        lines = text.split("\n")
-        print(lines)
-        lines.pop(int(cut))
-        print(lines)
-        new_file = str(lines)
-        file = open(fname, "w")
-        file.write(new_file)
-        print(file)
+        cut = input("Type the number of ToDo you want to remove :")
+        file = open(fname , "r")
+        lines = file.readlines()
         file.close()
+        del lines[int(cut)]
+        new_file = open(fname , "w+")
+        count = 0
+        for line in lines:
+            count += 1
+            new_file.write(line)
+        new_file.close()
+
    else :
         file.close()
 # Last time Reading the last time
@@ -65,7 +65,7 @@ else :
          print("Okay, next one:")
    file.close()
 #Counting lines
-   print(Total work you have to do is:)
+   print("Total work you have to do is:")
    x = open(fname , "r")
    count = 0
    for line in x :
