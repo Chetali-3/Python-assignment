@@ -1,5 +1,3 @@
+type
 read
 learn
-type
-amazing
-plus

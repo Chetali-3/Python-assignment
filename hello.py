@@ -30,11 +30,11 @@ if answer == "ex.file" :
         lines = file.readlines()
         file.close()
         for line in lines:
-            line = len(cut) - 1
+            line = int(cut) - 1
         del lines[int(line)]
         new_file = open(fname , "w+")
-        for line in lines:
-                new_file.write(line)
+        for line in lines :
+            new_file.write(line)
         new_file.close()
 
    else :
