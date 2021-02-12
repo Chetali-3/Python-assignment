@@ -22,7 +22,7 @@ if answer == "ex.file" :
         plus = input("Type the Todo , you want to add:")
         file = open (fname , "r+")
         text = file.read()
-        file.write(plus)
+        file.write(plus + "\n")
         file.close()                        
    elif reply == "cut" :
         cut = input("Type the number of ToDo you want to remove :")

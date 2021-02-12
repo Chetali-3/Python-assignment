@@ -1,2 +1,5 @@
-fun
 read
+learn
+type
+amazing
+plus
