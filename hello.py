@@ -6,7 +6,8 @@ def print_name(name) :
 print_name(input("Please enter your name :" ))
 
 # Asking the operator
-print("Note :-  for new Todo file, type 'new.file'  or for existing Todo file ,type 'ex.file' ")
+Note = "For new Todo file= type 'new.file'\nor for existing Todo file= type 'ex.file'\n "
+print(Note + "\n")
 answer = input("Please enter which file you want to open : ")
 if answer == "ex.file" :
    fname = input("Please enter your existing file name: ")
@@ -28,12 +29,12 @@ if answer == "ex.file" :
         file = open(fname , "r")
         lines = file.readlines()
         file.close()
-        del lines[int(cut)]
-        new_file = open(fname , "w+")
-        count = 0
         for line in lines:
-            count += 1
-            new_file.write(line)
+            line = len(cut) - 1
+        del lines[int(line)]
+        new_file = open(fname , "w+")
+        for line in lines:
+                new_file.write(line)
         new_file.close()
 
    else :

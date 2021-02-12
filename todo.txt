@@ -1,3 +1,2 @@
-type
-learn
-understand
+fun
+read
